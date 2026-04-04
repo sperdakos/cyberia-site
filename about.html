@@ -4,30 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
   </head>
 
   <body>
+    <!-- NAV -->
     <nav>
       <a class="nav-logo" href="index.html">CYBERIA</a>
-      <ul class="nav-links">
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+        <a href="cart.html" class="nav-cart">
+          <img src="assets/cart icon.svg" alt="Cart" />
+          <span class="cart-badge" id="cart-badge">0</span>
+        </a>
+      </div>
     </nav>
 
+    <!-- ABOUT -->
     <div class="inner-page">
       <div class="page-hero">
-        <h1 class="page-hero-title">ABOUT</h1>
+        <h1 class="page-hero-title">About</h1>
       </div>
 
       <div class="page-content">
-        <p class="about-text">
+        <div class="about-statement">
           Cyberia is an underground electronic music experience focused on
-          high-production events.
-        </p>
+          high-production events and immersive environments.
+        </div>
+
+        <div class="about-cols">
+          <div class="about-text">
+            <p>
+              Cyberia operates at the intersection of sound, architecture, and
+              visual systems.
+            </p>
+            <p>Each event is constructed as a full sensory environment.</p>
+          </div>
+
+          <div class="about-text">
+            <p>We collaborate with artists, designers, and technologists.</p>
+            <p>Our focus is on precision, atmosphere, and cultural impact.</p>
+          </div>
+        </div>
       </div>
+
+      <footer>
+        <div class="footer-logo">Cyberia</div>
+        <ul class="footer-links">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-copy">© 2026 Cyberia.</div>
+      </footer>
     </div>
   </body>
 </html>
