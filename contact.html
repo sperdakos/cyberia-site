@@ -4,25 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/main.js"></script>
   </head>
+
   <body>
+    <!-- NAV -->
     <nav>
       <a class="nav-logo" href="index.html">CYBERIA</a>
-      <ul class="nav-links">
-        <li><a href="events.html">EVENTS</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+
+        <a href="cart.html" class="nav-cart">
+          <img src="assets/cart icon.svg" alt="Cart" />
+          <span class="cart-badge" id="cart-badge">0</span>
+        </a>
+      </div>
     </nav>
 
-    <div class="page-content">
-      <form>
-        <input placeholder="Name" />
-        <input placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-      </form>
+    <!-- CONTACT -->
+    <div class="inner-page">
+      <div class="page-hero">
+        <h1 class="page-hero-title">Contact</h1>
+      </div>
+
+      <div class="page-content">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h3>Get in touch</h3>
+            <p>For bookings, collaborations, and inquiries.</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value">info@cyberia.com</div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-label">Location</div>
+                <div class="contact-item-value">Montreal / International</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input class="form-input" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-logo">Cyberia</div>
+        <ul class="footer-links">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-copy">© 2026 Cyberia.</div>
+      </footer>
     </div>
   </body>
 </html>
