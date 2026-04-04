@@ -36,7 +36,17 @@
       </div>
 
       <div class="page-content">
-        <div class="events-filter"></div>
+        <div class="events-filter">
+          <button class="filter-btn active" onclick="setFilter(this)">
+            All
+          </button>
+          <button class="filter-btn" onclick="setFilter(this)">Upcoming</button>
+          <button class="filter-btn" onclick="setFilter(this)">Past</button>
+          <button class="filter-btn" onclick="setFilter(this)">Montreal</button>
+          <button class="filter-btn" onclick="setFilter(this)">
+            International
+          </button>
+        </div>
 
         <div class="events-list">
           <div class="event-row">
