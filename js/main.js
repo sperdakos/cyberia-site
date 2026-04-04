@@ -24,27 +24,56 @@ function setFilter(btn) {
   btn.classList.add("active");
 }
 
-// LOAD CART PAGE
+// LOAD CART PAGE (FIXED)
 function renderCart() {
-  const container = document.getElementById("cart-items");
-  if (!container) return;
+  try {
+    const cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-  container.innerHTML = "";
+    const empty = document.getElementById("cart-empty");
+    const full = document.getElementById("cart-full");
+    const list = document.getElementById("cart-items-list");
 
-  if (cart.length === 0) {
-    container.innerHTML = "<p>Your cart is empty.</p>";
-    return;
+    // If not on cart page, exit safely
+    if (!empty && !full && !list) return;
+
+    // EMPTY STATE
+    if (cartData.length === 0) {
+      if (empty) empty.style.display = "block";
+      if (full) full.style.display = "none";
+      return;
+    }
+
+    // FULL STATE
+    if (empty) empty.style.display = "none";
+    if (full) full.style.display = "grid";
+
+    // Render items
+    if (list) {
+      list.innerHTML = "";
+
+      cartData.forEach((item, i) => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+
+        div.innerHTML = `
+          <div>${item}</div>
+          <button onclick="removeFromCart(${i})">Remove</button>
+        `;
+
+        list.appendChild(div);
+      });
+    }
+
+  } catch (e) {
+    console.error("Cart error:", e);
+
+    // Fail-safe: always show empty state
+    const empty = document.getElementById("cart-empty");
+    const full = document.getElementById("cart-full");
+
+    if (empty) empty.style.display = "block";
+    if (full) full.style.display = "none";
   }
-
-  cart.forEach((item, i) => {
-    const div = document.createElement("div");
-    div.className = "cart-item";
-    div.innerHTML = `
-      <div>${item}</div>
-      <button onclick="removeFromCart(${i})">Remove</button>
-    `;
-    container.appendChild(div);
-  });
 }
 
 // REMOVE ITEM
