@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="index.html">CYBERIA</a>
+
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <img src="assets/hamburger-menu.svg" id="hamburger" class="hamburger" />
+        <a href="cart.html" class="nav-cart">
+          <img src="assets/cart-icon.svg" alt="Cart" />
+          <span class="cart-badge" id="cart-badge">0</span>
+        </a>
+      </div>
+
+      <div class="menu-overlay" id="menu-overlay">
+        <div class="menu-header">
+          <span id="close-menu">✕</span>
+        </div>
+
+        <ul class="menu-links">
+          <li><a href="events.html">EVENTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="cart.html">CART</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- CART -->
+    <div class="inner-page">
+      <div class="page-hero">
+        <h1 class="page-hero-title">Cart</h1>
+      </div>
+
+      <div class="page-content">
+        <!-- Empty state -->
+        <div id="cart-empty" class="cart-empty" style="display: block">
+          <div class="cart-empty-icon">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17 6.75H7C4.65279 6.75 2.75 8.65279 2.75 11V17C2.75 19.3472 4.65279 21.25 7 21.25H17C19.3472 21.25 21.25 19.3472 21.25 17V11C21.25 8.65279 19.3472 6.75 17 6.75Z"
+                stroke="#e5e5e5"
+                stroke-width="1.5" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.85158 9C8.38955 9 8.73211 8.3671 8.60267 7.84493C8.53559 7.57434 8.5 7.29133 8.5 7C8.5 5.067 10.067 3.5 12 3.5C13.933 3.5 15.5 5.067 15.5 7C15.5 7.29133 15.4644 7.57434 15.3973 7.84493C15.2679 8.3671 15.6105 9 16.1484 9C16.413 9 16.6563 8.84454 16.7406 8.59377C16.9088 8.0932 17 7.55725 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 7.55725 7.09116 8.0932 7.25938 8.59377C7.34365 8.84454 7.58703 9 7.85158 9Z"
+                fill="#e5e5e5" />
+            </svg>
+          </div>
+          <div class="cart-empty-title">Your cart is empty</div>
+          <div class="cart-empty-sub">
+            Browse upcoming events to add tickets.
+          </div>
+          <a href="events.html" class="btn">Browse Events</a>
+        </div>
+
+        <!-- Filled state -->
+        <div id="cart-full" class="cart-layout" style="display: none">
+          <div>
+            <p class="section-label">Your Items</p>
+            <div class="cart-items" id="cart-items-list"></div>
+            <div style="margin-top: 24px">
+              <a href="events.html" class="btn btn-outline">Add More</a>
+            </div>
+          </div>
+          <div class="cart-summary">
+            <div class="cart-summary-title">Order Summary</div>
+            <div class="cart-summary-rows">
+              <div class="cart-summary-row">
+                <span>Subtotal</span><span id="summary-subtotal">—</span>
+              </div>
+              <div class="cart-summary-row">
+                <span>Service Fee</span><span id="summary-fee">—</span>
+              </div>
+              <div class="cart-summary-row total">
+                <span>Total</span><span id="summary-total">—</span>
+              </div>
+            </div>
+            <div class="cart-promo">
+              <input type="text" placeholder="Promo code" />
+              <button>Apply</button>
+            </div>
+            <button class="btn" style="width: 100%; text-align: center">
+              Checkout
+            </button>
+            <div class="cart-note">
+              Secure checkout &middot; No account required<br />Tickets
+              delivered by email
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-logo">Cyberia</div>
+        <div class="footer-copy">© 2026 Cyberia.</div>
+      </footer>
+    </div>
+  </body>
+</html>
